@@ -1,30 +1,26 @@
 import "reflect-metadata";
-import express from "express";
+import express, {Request, Response, NextFunction}from "express";
 import "./database";
+import "express-async-errors";
 
 import { router } from "./routes";
 
 const app = express();
 
-/**
- * GET    => Looking for information
- * POST   => Insert ( Create ) a information
- * PUT    => Update one information
- * DELETE => Remove a information
- * PATH   => Update a specific information 
- */
-
-/**
- * Routes Params => http://localhost:3000/produtos/5484848484
- * Query Params => http://localhost:3000/produtos?numero=5484848484
- * Body Params => {
- * "name": "teclado"
- *  "quantidade: 2"}
- */
-
 app.use(express.json());
 app.use(router);
 
+app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
+    if(err instanceof Error) {
+        return response.status(400).json({
+            error: err.message
+        })
+    }
+    return response.status(500).json({
+        status: "error",
+        message: "Internal Server Error"
+    })
+})
 
 app.listen(3000, () => {
     console.log("Server is running")
