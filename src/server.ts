@@ -2,6 +2,8 @@ import "reflect-metadata";
 import express from "express";
 import "./database";
 
+import { router } from "./routes";
+
 const app = express();
 
 /**
@@ -20,20 +22,10 @@ const app = express();
  *  "quantidade: 2"}
  */
 
-app.get("/", function(request, response) {
-    return response.send("Hellow")
-})
-app.get("/test/{id}", (request, response) => {
-    //REQUEST => INFORMATION THAT IS ENTERING
-    //RESPONSE => INFORMATION THAT IS COMING OUT
+app.use(express.json());
+app.use(router);
 
-    return response.send("Hello my friend usadsas")
-})
 
-app.post("/test-post", (request, response) => {
-    return response.send("Running test-post")
-})
-//https://localhost:3000
 app.listen(3000, () => {
     console.log("Server is running")
 })
