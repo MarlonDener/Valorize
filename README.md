@@ -47,6 +47,16 @@ Sistema para fazer elogio a outros usuários por meio de tags.
 ![image](https://user-images.githubusercontent.com/70349830/127724736-e0d793f9-8046-4bc0-82bc-0ee173e86e64.png)
 <br />
 <br />
-<h4>Assim finalizo a descrição do meu projeto, muito obrigado por estar aqui, me coloco a disposição para contatos.</h4>
+## Contatos :large_orange_diamond:
+
+<a href="https://www.linkedin.com/in/marlondener/" target="_blank">
+  <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="mailto:marlondener01@gmail.com" target="_blank">
+   <img src="https://img.shields.io/badge/gmail-D14836?&style=for-the-badge&logo=gmail&logoColor=white"/>
+ </a>
+ 
+ <hr>
 
 
