@@ -46,8 +46,7 @@ Sistema para fazer elogio a outros usuários por meio de tags.
 
 ![image](https://user-images.githubusercontent.com/70349830/127724736-e0d793f9-8046-4bc0-82bc-0ee173e86e64.png)
 <br />
-<br />
-## Contatos :large_orange_diamond:
+## Contatos :paperclip:
 
 <a href="https://www.linkedin.com/in/marlondener/" target="_blank">
   <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
