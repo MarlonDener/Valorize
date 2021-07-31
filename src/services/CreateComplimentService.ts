@@ -29,5 +29,19 @@ import { UserRepositories } from "../repositories/UsersRepositories";
                 throw new Error("User Receiver does not exists!");
             }
 
+            const compliment = complimentsRepositories.create({
+                tag_id,
+                user_receiver,
+                user_sender,
+                message
+            })
+
+
+            await complimentsRepositories.save(compliment);
+
+            return compliment;
+        
         }
     }
+
+    export { CreateComplimentService }

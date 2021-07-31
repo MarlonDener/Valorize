@@ -1,5 +1,6 @@
 import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { v4 as uuid} from "uuid";
+import { Expose } from "class-transformer";
 
 @Entity("tags")
 class Tag {
@@ -15,6 +16,14 @@ class Tag {
 
     @UpdateDateColumn()
     updated_at: Date;
+
+    @Expose({name: "hashtag"})
+    hashtag(): string {
+        const removeSpace = this.name.trim();
+        const Confirm = removeSpace.replace(" ", "-");
+        const hashtag = `#${Confirm}`;
+        return hashtag;
+    }
 
     constructor() {
         if(!this.id) {
